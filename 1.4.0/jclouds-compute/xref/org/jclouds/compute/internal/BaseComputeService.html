@@ -628,7 +628,7 @@
 <a class="jxr_linenumber" name="618" href="#618">618</a> 
 <a class="jxr_linenumber" name="619" href="#619">619</a>    <strong class="jxr_keyword">protected</strong> <a href="../../../../org/jclouds/compute/domain/NodeMetadata.html">NodeMetadata</a> updateNodeWithCredentialsIfPresent(<a href="../../../../org/jclouds/compute/domain/NodeMetadata.html">NodeMetadata</a> node, <a href="../../../../org/jclouds/compute/options/RunScriptOptions.html">RunScriptOptions</a> options) {
 <a class="jxr_linenumber" name="620" href="#620">620</a>       checkNotNull(node, <span class="jxr_string">"node"</span>);
-<a class="jxr_linenumber" name="621" href="#621">621</a>       <a href="../../../../org/jclouds/compute/domain/CIMOperatingSystem.html">Builder</a> builder = LoginCredentials.builder(node.getCredentials());
+<a class="jxr_linenumber" name="621" href="#621">621</a>       <a href="../../../../org/jclouds/compute/domain/OperatingSystem.html">Builder</a> builder = LoginCredentials.builder(node.getCredentials());
 <a class="jxr_linenumber" name="622" href="#622">622</a>       <strong class="jxr_keyword">if</strong> (options.getLoginUser() != <strong class="jxr_keyword">null</strong>)
 <a class="jxr_linenumber" name="623" href="#623">623</a>          builder.user(options.getLoginUser());
 <a class="jxr_linenumber" name="624" href="#624">624</a>       <strong class="jxr_keyword">if</strong> (options.hasLoginPasswordOption()) {
