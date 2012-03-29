@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2012-03-26T13:40:09.934">
+<pmd version="4.2.5" timestamp="2012-03-29T01:13:31.779">
 <file name="/scratch/hudson/workspace/jclouds-1.4.0-maven-site-deploy/apis/cloudstack/src/main/java/org/jclouds/cloudstack/CloudStackGlobalAsyncClient.java">
 <violation beginline="25" endline="25" begincolumn="1" endcolumn="65" rule="UnusedImports" ruleset="Import Statement Rules" package="org.jclouds.cloudstack" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
 Avoid unused imports such as 'org.jclouds.cloudstack.features.GlobalConfigurationClient'
