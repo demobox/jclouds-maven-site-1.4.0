@@ -49,7 +49,7 @@
 <a class="jxr_linenumber" name="39" href="#39">39</a>  <em class="jxr_javadoccomment"> * @author Adrian Cole</em>
 <a class="jxr_linenumber" name="40" href="#40">40</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../org/jclouds/aws/ec2/domain/PlacementGroup.html">PlacementGroup</a> <strong class="jxr_keyword">implements</strong> Comparable&lt;PlacementGroup&gt; {
-<a class="jxr_linenumber" name="42" href="#42">42</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> enum <a href="../../../../../org/jclouds/aws/ec2/domain/SpotInstanceRequest.html">State</a> {
+<a class="jxr_linenumber" name="42" href="#42">42</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> enum <a href="../../../../../org/jclouds/aws/ec2/domain/PlacementGroup.html">State</a> {
 <a class="jxr_linenumber" name="43" href="#43">43</a>        PENDING, AVAILABLE, DELETING, DELETED, UNRECOGNIZED;
 <a class="jxr_linenumber" name="44" href="#44">44</a>        <strong class="jxr_keyword">public</strong> String value() {
 <a class="jxr_linenumber" name="45" href="#45">45</a>           <strong class="jxr_keyword">return</strong> name().toLowerCase();
@@ -60,7 +60,7 @@
 <a class="jxr_linenumber" name="50" href="#50">50</a>           <strong class="jxr_keyword">return</strong> value();
 <a class="jxr_linenumber" name="51" href="#51">51</a>        }
 <a class="jxr_linenumber" name="52" href="#52">52</a>  
-<a class="jxr_linenumber" name="53" href="#53">53</a>        <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/jclouds/aws/ec2/domain/SpotInstanceRequest.html">State</a> fromValue(String state) {
+<a class="jxr_linenumber" name="53" href="#53">53</a>        <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../../org/jclouds/aws/ec2/domain/PlacementGroup.html">State</a> fromValue(String state) {
 <a class="jxr_linenumber" name="54" href="#54">54</a>           <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="55" href="#55">55</a>              <strong class="jxr_keyword">return</strong> valueOf(checkNotNull(state, <span class="jxr_string">"state"</span>).toUpperCase());
 <a class="jxr_linenumber" name="56" href="#56">56</a>           } <strong class="jxr_keyword">catch</strong> (IllegalArgumentException e) {
@@ -72,9 +72,9 @@
 <a class="jxr_linenumber" name="62" href="#62">62</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String region;
 <a class="jxr_linenumber" name="63" href="#63">63</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String name;
 <a class="jxr_linenumber" name="64" href="#64">64</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String strategy;
-<a class="jxr_linenumber" name="65" href="#65">65</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <a href="../../../../../org/jclouds/aws/ec2/domain/SpotInstanceRequest.html">State</a> state;
+<a class="jxr_linenumber" name="65" href="#65">65</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <a href="../../../../../org/jclouds/aws/ec2/domain/PlacementGroup.html">State</a> state;
 <a class="jxr_linenumber" name="66" href="#66">66</a>  
-<a class="jxr_linenumber" name="67" href="#67">67</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../org/jclouds/aws/ec2/domain/PlacementGroup.html">PlacementGroup</a>(String region, String name, String strategy, <a href="../../../../../org/jclouds/aws/ec2/domain/SpotInstanceRequest.html">State</a> state) {
+<a class="jxr_linenumber" name="67" href="#67">67</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../org/jclouds/aws/ec2/domain/PlacementGroup.html">PlacementGroup</a>(String region, String name, String strategy, <a href="../../../../../org/jclouds/aws/ec2/domain/PlacementGroup.html">State</a> state) {
 <a class="jxr_linenumber" name="68" href="#68">68</a>        <strong class="jxr_keyword">this</strong>.region = checkNotNull(region, <span class="jxr_string">"region"</span>);
 <a class="jxr_linenumber" name="69" href="#69">69</a>        <strong class="jxr_keyword">this</strong>.name = checkNotNull(name, <span class="jxr_string">"name"</span>);
 <a class="jxr_linenumber" name="70" href="#70">70</a>        <strong class="jxr_keyword">this</strong>.strategy = checkNotNull(strategy, <span class="jxr_string">"strategy"</span>);
@@ -110,7 +110,7 @@
 <a class="jxr_linenumber" name="100" href="#100">100</a>    <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="101" href="#101">101</a> <em class="jxr_javadoccomment">    * @return Status of the placement group.</em>
 <a class="jxr_linenumber" name="102" href="#102">102</a> <em class="jxr_javadoccomment">    */</em>
-<a class="jxr_linenumber" name="103" href="#103">103</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../../org/jclouds/aws/ec2/domain/SpotInstanceRequest.html">State</a> getState() {
+<a class="jxr_linenumber" name="103" href="#103">103</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../../org/jclouds/aws/ec2/domain/PlacementGroup.html">State</a> getState() {
 <a class="jxr_linenumber" name="104" href="#104">104</a>       <strong class="jxr_keyword">return</strong> state;
 <a class="jxr_linenumber" name="105" href="#105">105</a>    }
 <a class="jxr_linenumber" name="106" href="#106">106</a> 
