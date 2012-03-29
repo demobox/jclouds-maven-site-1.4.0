@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2012-03-26T12:55:26.012">
+<pmd version="4.2.5" timestamp="2012-03-29T00:00:27.444">
 <file name="/scratch/hudson/workspace/jclouds-1.4.0-maven-site-deploy/apis/vcloud/src/main/java/org/jclouds/vcloud/VCloudPropertiesBuilder.java">
 <violation beginline="19" endline="63" begincolumn="1" endcolumn="2" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="org.jclouds.vcloud" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
 Too many static imports may lead to messy code
